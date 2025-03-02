@@ -2,13 +2,9 @@ name: KYPO Test Workflow
 
 on:
   push:
-    branches:
-      - main
-      - different-files
+    branches: '**'
   pull_request:
-    branches:
-      - main
-      - different-files
+    branches: '**'
 
 jobs:
 

@@ -10,21 +10,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Tofu
-        uses: opentofu/setup-opentofu@v1
+        uses: hashicorp/setup-terraform@v3
         # with:
         #   tofu_wrapper: false
 
       - name: Init Tofu
-        run: tofu init
+        run: terraform init
 
       - name: Vaidate Tofu
-        run: tofu validate
+        run: terraform validate
       
       - name: Plan Tofu
         # id: plan
-        run: tofu plan
+        run: terraform plan
 
-      # Useless step      
+      # Useless step ?
       # - name: Show outputs
       #   run: |
       #     echo ${{ steps.plan.outputs.stdout }}
@@ -32,7 +32,7 @@ jobs:
       #     echo ${{ steps.plan.outputs.exitcode }}
 
       - name: Terraform Apply
-        run: tofu apply -auto-approve
+        run: terraform apply -auto-approve
       
       # - name: Cache Terraform
       #   uses: actions/cache@v3

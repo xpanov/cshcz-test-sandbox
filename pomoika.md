@@ -101,3 +101,8 @@ Run the same `terraform init`, `terraform apply`, and `terraform destroy` comman
 ## Notes
 
 * Do we really need 'destroy'?
+* Which one to use?
+   * hashicorp/setup-terraform
+   * opentofu/setup-opentofu
+* What is 'show outputs'?
+
