@@ -97,3 +97,7 @@ Run the same `terraform init`, `terraform apply`, and `terraform destroy` comman
 
 ---
 
+
+## Notes
+
+* Do we really need 'destroy'?
