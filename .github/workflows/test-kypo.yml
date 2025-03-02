@@ -13,7 +13,7 @@ jobs:
   #   uses: muni-kypo-images/ci-cd-virtual-images/.github/workflows/terraform.yml@master
 
   test-kypo:
-    uses: ./terraform.yml  # Call the reusable workflow
+    uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
     with:
       action: 'terraform-build'
     #todo ON STOP
@@ -31,7 +31,7 @@ jobs:
   test-kypo-cleanup:
     needs: test-kypo
     if: cancelled()
-    uses: ./terraform.yml  # Call the reusable workflow
+    uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
     with:
       action: 'terraform-destroy'
     # runs-on: ubuntu-latest
