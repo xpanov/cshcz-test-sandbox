@@ -9,18 +9,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Tofu
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         # with:
         #   tofu_wrapper: false
 
-      - name: Init Tofu
+      - name: Init Terraform
         run: terraform init
 
-      - name: Vaidate Tofu
+      - name: Vaidate Terraform
         run: terraform validate
       
-      - name: Plan Tofu
+      - name: Plan Terraform
         # id: plan
         run: terraform plan
 
@@ -31,8 +31,12 @@ jobs:
       #     echo ${{ steps.plan.outputs.stderr }}
       #     echo ${{ steps.plan.outputs.exitcode }}
 
-      - name: Terraform Apply
+      - name: Apply Terraform
         run: terraform apply -auto-approve
+      
+      - name: Tests
+        run: |
+          ls -la
       
       # - name: Cache Terraform
       #   uses: actions/cache@v3
