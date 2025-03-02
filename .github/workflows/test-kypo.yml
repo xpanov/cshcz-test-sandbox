@@ -16,8 +16,8 @@ jobs:
       action: 'terraform-build'
 
   test-kypo-cleanup:
-    # needs: test-kypo
-    # if: cancelled()
+    needs: test-kypo
+    if: cancelled()
     uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
     with:
       action: 'terraform-destroy'
