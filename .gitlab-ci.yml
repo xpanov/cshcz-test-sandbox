@@ -1,0 +1,3 @@
+include:
+  - project: muni-kypo-images/ci-cd-virtual-images
+    file: test-kypo.yml
