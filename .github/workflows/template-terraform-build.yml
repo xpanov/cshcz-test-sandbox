@@ -21,6 +21,7 @@ jobs:
         run: tofu validate
       
       - name: Plan Tofu
+        id: plan
         run: tofu plan
       
       - name: Show outputs
