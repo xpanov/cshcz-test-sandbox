@@ -12,7 +12,6 @@ jobs:
   terraform-build:
     runs-on: ubuntu-latest
     if: inputs.action == 'terraform-build'
-    # if: github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
