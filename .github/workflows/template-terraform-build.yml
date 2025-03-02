@@ -37,6 +37,10 @@ jobs:
       - name: Tests
         run: |
           ls -la
+          ls -la .terraform/
+          cat .terraform.lock.hcl
+          cat terraform.tfstate
+          cat test.txt
       
       # - name: Cache Terraform
       #   uses: actions/cache@v3
