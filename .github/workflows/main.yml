@@ -4,23 +4,21 @@ on:
   push:
     branches:
       - main
+      - different-files
   pull_request:
     branches:
       - main
+      - different-files
 
 jobs:
 
   test-kypo:
-    uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
-    with:
-      action: 'terraform-build'
+    uses: ./.github/workflows/template-terraform-build.yml  # Call the reusable workflow
 
   test-kypo-cleanup:
     needs: test-kypo
     if: cancelled()
-    uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
-    with:
-      action: 'terraform-destroy'
+    uses: ./.github/workflows/template-terraform-destroy.yml  # Call the reusable workflow
     # runs-on: ubuntu-latest
     # steps:
     #   - name: Checkout repository
