@@ -4,33 +4,20 @@ on:
   push:
     branches:
       - main
-  # pull_request:
-  #   branches:
-  #     - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  # build-kypo:
-  #   uses: muni-kypo-images/ci-cd-virtual-images/.github/workflows/terraform.yml@master
 
   test-kypo:
     uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
     with:
       action: 'terraform-build'
-    #todo ON STOP
-    # needs: build-kypo
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - name: Checkout repository
-    #     uses: actions/checkout@v4
-      
-    #   - name: Run Terraform build
-    #     run: |
-    #       terraform init
-    #       terraform apply -auto-approve
 
   test-kypo-cleanup:
     needs: test-kypo
-    if: cancelled()
+    # if: cancelled()
     uses: ./.github/workflows/terraform.yml  # Call the reusable workflow
     with:
       action: 'terraform-destroy'
