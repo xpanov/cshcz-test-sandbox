@@ -9,12 +9,12 @@ on:
 jobs:
 
   test-kypo:
-    uses: ./.github/workflows/template-terraform-build.yml  # Call the reusable workflow
+    uses: ./.github/workflows/template-terraform.yml
 
-  test-kypo-cleanup:
-    needs: test-kypo
-    if: cancelled()
-    uses: ./.github/workflows/template-terraform-destroy.yml  # Call the reusable workflow
+  # test-kypo-cleanup:
+  #   needs: test-kypo
+  #   if: cancelled()
+  #   uses: ./.github/workflows/template-terraform-destroy.yml  # Call the reusable workflow
     # runs-on: ubuntu-latest
     # steps:
     #   - name: Checkout repository
