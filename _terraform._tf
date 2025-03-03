@@ -17,11 +17,13 @@ provider "kypo" {
 }
 
 module "sandbox" {
-  source        = "gitlab.ics.muni.cz/muni-kypo-images/sandbox-ci/kypo"
-  project_url   = var.CI_PROJECT_URL
-  rev           = var.CI_COMMIT_SHORT_SHA
-  kypo_endpoint = var.KYPO_ENDPOINT
+  source        = "gitlab.ics.muni.cz/muni-kypo-images/sandbox-ci/kypo" # https://gitlab.ics.muni.cz/muni-kypo-images/terraform-kypo-sandbox-ci
+  project_url   = var.CI_PROJECT_URL # url to the repo
+  rev           = var.CI_COMMIT_SHORT_SHA # find it
+  kypo_endpoint = var.KYPO_ENDPOINT # get it later
 }
+
+# also i need username and a password
 
 output "pool_url" {
   value = module.sandbox.pool_url

@@ -106,3 +106,5 @@ Run the same `terraform init`, `terraform apply`, and `terraform destroy` comman
    * opentofu/setup-opentofu
 * What is 'show outputs'?
 
+
+* find out about terraform registry in GH
