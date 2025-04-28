@@ -1,15 +1,15 @@
-data.openstack_networking_secgroup_v2.sandbox-man-int-sg: Reading...
 data.openstack_networking_network_v2.base-net: Reading...
-data.openstack_networking_secgroup_v2.sandbox-man-sg: Reading...
-data.openstack_images_image_ids_v2.image_data_source-images-p0000000001-s0000000002-man: Reading...
+data.openstack_networking_secgroup_v2.sandbox-man-int-sg: Reading...
+data.openstack_images_image_ids_v2.image_data_source-images-p0000000002-s0000000003-man: Reading...
 data.openstack_networking_secgroup_v2.sandbox-internal-sg: Reading...
+data.openstack_networking_secgroup_v2.sandbox-man-sg: Reading...
 data.openstack_networking_secgroup_v2.sandbox-access-sg: Reading...
-data.openstack_networking_secgroup_v2.sandbox-internal-sg: Read complete after 0s [id=c5b8055d-c5e8-4d2f-9e63-8daac437baa5]
-data.openstack_images_image_ids_v2.image_data_source-images-p0000000001-s0000000002-man: Read complete after 0s [id=779755519]
-data.openstack_networking_secgroup_v2.sandbox-man-int-sg: Read complete after 0s [id=a2bb667c-b7d4-4e6d-81ea-4a7a51f35685]
-data.openstack_networking_secgroup_v2.sandbox-access-sg: Read complete after 0s [id=ba01efe6-fc7b-419c-9613-fdbfe96f2b5f]
-data.openstack_networking_secgroup_v2.sandbox-man-sg: Read complete after 0s [id=45b0af02-60b3-4b30-9778-58e2267e5532]
+data.openstack_networking_secgroup_v2.sandbox-man-sg: Read complete after 1s [id=45b0af02-60b3-4b30-9778-58e2267e5532]
+data.openstack_images_image_ids_v2.image_data_source-images-p0000000002-s0000000003-man: Read complete after 1s [id=779755519]
+data.openstack_networking_secgroup_v2.sandbox-internal-sg: Read complete after 1s [id=c5b8055d-c5e8-4d2f-9e63-8daac437baa5]
+data.openstack_networking_secgroup_v2.sandbox-man-int-sg: Read complete after 1s [id=a2bb667c-b7d4-4e6d-81ea-4a7a51f35685]
 data.openstack_networking_network_v2.base-net: Read complete after 1s [id=3a663dbd-4509-433e-802f-08741ce691f6]
+data.openstack_networking_secgroup_v2.sandbox-access-sg: Read complete after 3s [id=ba01efe6-fc7b-419c-9613-fdbfe96f2b5f]
 
 OpenTofu used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -17,8 +17,8 @@ plan. Resource actions are indicated with the following symbols:
 
 OpenTofu will perform the following actions:
 
-  # openstack_compute_instance_v2.images-p0000000001-s0000000002-man will be created
-  + resource "openstack_compute_instance_v2" "images-p0000000001-s0000000002-man" {
+  # openstack_compute_instance_v2.images-p0000000002-s0000000003-man will be created
+  + resource "openstack_compute_instance_v2" "images-p0000000002-s0000000003-man" {
       + access_ip_v4        = (known after apply)
       + access_ip_v6        = (known after apply)
       + all_metadata        = (known after apply)
@@ -32,8 +32,8 @@ OpenTofu will perform the following actions:
       + id                  = (known after apply)
       + image_id            = (known after apply)
       + image_name          = "debian-12-x86_64"
-      + key_pair            = "images-p0000000001-a06052fa-ssh"
-      + name                = "images-p0000000001-s0000000002-man"
+      + key_pair            = "images-p0000000002-e05082f8-ssh"
+      + name                = "images-p0000000002-s0000000003-man"
       + power_state         = "active"
       + region              = (known after apply)
       + security_groups     = (known after apply)
@@ -69,8 +69,8 @@ OpenTofu will perform the following actions:
         }
     }
 
-  # openstack_networking_network_v2.images-p0000000001-s0000000002-man-network will be created
-  + resource "openstack_networking_network_v2" "images-p0000000001-s0000000002-man-network" {
+  # openstack_networking_network_v2.images-p0000000002-s0000000003-man-network will be created
+  + resource "openstack_networking_network_v2" "images-p0000000002-s0000000003-man-network" {
       + admin_state_up          = true
       + all_tags                = (known after apply)
       + availability_zone_hints = (known after apply)
@@ -78,7 +78,7 @@ OpenTofu will perform the following actions:
       + external                = (known after apply)
       + id                      = (known after apply)
       + mtu                     = (known after apply)
-      + name                    = "images-p0000000001-s0000000002-man-network"
+      + name                    = "images-p0000000002-s0000000003-man-network"
       + port_security_enabled   = (known after apply)
       + qos_policy_id           = (known after apply)
       + region                  = (known after apply)
@@ -89,8 +89,8 @@ OpenTofu will perform the following actions:
       + segments (known after apply)
     }
 
-  # openstack_networking_network_v2.images-p0000000001-s0000000002-wan will be created
-  + resource "openstack_networking_network_v2" "images-p0000000001-s0000000002-wan" {
+  # openstack_networking_network_v2.images-p0000000002-s0000000003-wan will be created
+  + resource "openstack_networking_network_v2" "images-p0000000002-s0000000003-wan" {
       + admin_state_up          = true
       + all_tags                = (known after apply)
       + availability_zone_hints = (known after apply)
@@ -98,7 +98,7 @@ OpenTofu will perform the following actions:
       + external                = (known after apply)
       + id                      = (known after apply)
       + mtu                     = (known after apply)
-      + name                    = "images-p0000000001-s0000000002-wan"
+      + name                    = "images-p0000000002-s0000000003-wan"
       + port_security_enabled   = (known after apply)
       + qos_policy_id           = (known after apply)
       + region                  = (known after apply)
@@ -109,8 +109,8 @@ OpenTofu will perform the following actions:
       + segments (known after apply)
     }
 
-  # openstack_networking_port_v2.images-p0000000001-s0000000002-link-1 will be created
-  + resource "openstack_networking_port_v2" "images-p0000000001-s0000000002-link-1" {
+  # openstack_networking_port_v2.images-p0000000002-s0000000003-link-1 will be created
+  + resource "openstack_networking_port_v2" "images-p0000000002-s0000000003-link-1" {
       + admin_state_up         = true
       + all_fixed_ips          = (known after apply)
       + all_security_group_ids = (known after apply)
@@ -121,7 +121,7 @@ OpenTofu will perform the following actions:
       + dns_name               = (known after apply)
       + id                     = (known after apply)
       + mac_address            = (known after apply)
-      + name                   = "images-p0000000001-s0000000002-link-1"
+      + name                   = "images-p0000000002-s0000000003-link-1"
       + network_id             = (known after apply)
       + port_security_enabled  = (known after apply)
       + qos_policy_id          = (known after apply)
@@ -142,8 +142,8 @@ OpenTofu will perform the following actions:
         }
     }
 
-  # openstack_networking_port_v2.images-p0000000001-s0000000002-link-2 will be created
-  + resource "openstack_networking_port_v2" "images-p0000000001-s0000000002-link-2" {
+  # openstack_networking_port_v2.images-p0000000002-s0000000003-link-2 will be created
+  + resource "openstack_networking_port_v2" "images-p0000000002-s0000000003-link-2" {
       + admin_state_up         = true
       + all_fixed_ips          = (known after apply)
       + all_security_group_ids = (known after apply)
@@ -154,7 +154,7 @@ OpenTofu will perform the following actions:
       + dns_name               = (known after apply)
       + id                     = (known after apply)
       + mac_address            = (known after apply)
-      + name                   = "images-p0000000001-s0000000002-link-2"
+      + name                   = "images-p0000000002-s0000000003-link-2"
       + network_id             = (known after apply)
       + port_security_enabled  = (known after apply)
       + qos_policy_id          = (known after apply)
@@ -175,8 +175,8 @@ OpenTofu will perform the following actions:
         }
     }
 
-  # openstack_networking_port_v2.images-p0000000001-s0000000002-man-out-port will be created
-  + resource "openstack_networking_port_v2" "images-p0000000001-s0000000002-man-out-port" {
+  # openstack_networking_port_v2.images-p0000000002-s0000000003-man-out-port will be created
+  + resource "openstack_networking_port_v2" "images-p0000000002-s0000000003-man-out-port" {
       + admin_state_up         = true
       + all_fixed_ips          = (known after apply)
       + all_security_group_ids = (known after apply)
@@ -187,7 +187,7 @@ OpenTofu will perform the following actions:
       + dns_name               = (known after apply)
       + id                     = (known after apply)
       + mac_address            = (known after apply)
-      + name                   = "images-p0000000001-s0000000002-man-out-port"
+      + name                   = "images-p0000000002-s0000000003-man-out-port"
       + network_id             = "3a663dbd-4509-433e-802f-08741ce691f6"
       + port_security_enabled  = (known after apply)
       + qos_policy_id          = (known after apply)
@@ -204,8 +204,8 @@ OpenTofu will perform the following actions:
       + binding (known after apply)
     }
 
-  # openstack_networking_subnet_v2.images-p0000000001-s0000000002-man-network-subnet will be created
-  + resource "openstack_networking_subnet_v2" "images-p0000000001-s0000000002-man-network-subnet" {
+  # openstack_networking_subnet_v2.images-p0000000002-s0000000003-man-network-subnet will be created
+  + resource "openstack_networking_subnet_v2" "images-p0000000002-s0000000003-man-network-subnet" {
       + all_tags          = (known after apply)
       + cidr              = "192.168.128.0/17"
       + dns_nameservers   = [
@@ -218,7 +218,7 @@ OpenTofu will perform the following actions:
       + ip_version        = 4
       + ipv6_address_mode = (known after apply)
       + ipv6_ra_mode      = (known after apply)
-      + name              = "images-p0000000001-s0000000002-man-network-subnet"
+      + name              = "images-p0000000002-s0000000003-man-network-subnet"
       + network_id        = (known after apply)
       + no_gateway        = true
       + region            = (known after apply)
@@ -228,8 +228,8 @@ OpenTofu will perform the following actions:
       + allocation_pool (known after apply)
     }
 
-  # openstack_networking_subnet_v2.images-p0000000001-s0000000002-wan-subnet will be created
-  + resource "openstack_networking_subnet_v2" "images-p0000000001-s0000000002-wan-subnet" {
+  # openstack_networking_subnet_v2.images-p0000000002-s0000000003-wan-subnet will be created
+  + resource "openstack_networking_subnet_v2" "images-p0000000002-s0000000003-wan-subnet" {
       + all_tags          = (known after apply)
       + cidr              = "100.100.100.0/24"
       + dns_nameservers   = [
@@ -242,7 +242,7 @@ OpenTofu will perform the following actions:
       + ip_version        = 4
       + ipv6_address_mode = (known after apply)
       + ipv6_ra_mode      = (known after apply)
-      + name              = "images-p0000000001-s0000000002-wan-subnet"
+      + name              = "images-p0000000002-s0000000003-wan-subnet"
       + network_id        = (known after apply)
       + no_gateway        = true
       + region            = (known after apply)
@@ -253,23 +253,24 @@ OpenTofu will perform the following actions:
     }
 
 Plan: 8 to add, 0 to change, 0 to destroy.
-openstack_networking_network_v2.images-p0000000001-s0000000002-man-network: Creating...
-openstack_networking_network_v2.images-p0000000001-s0000000002-wan: Creating...
-openstack_networking_port_v2.images-p0000000001-s0000000002-man-out-port: Creating...
-openstack_networking_network_v2.images-p0000000001-s0000000002-man-network: Creation complete after 6s [id=d9a9a705-f610-4129-a59e-e7c0fb4da313]
-openstack_networking_subnet_v2.images-p0000000001-s0000000002-man-network-subnet: Creating...
-openstack_networking_port_v2.images-p0000000001-s0000000002-man-out-port: Creation complete after 7s [id=45b73a1c-5422-44db-91a1-fa31c8018e01]
-openstack_networking_network_v2.images-p0000000001-s0000000002-wan: Creation complete after 7s [id=d40ca03e-3222-49a5-818a-e524a6411671]
-openstack_networking_subnet_v2.images-p0000000001-s0000000002-wan-subnet: Creating...
-openstack_networking_subnet_v2.images-p0000000001-s0000000002-man-network-subnet: Creation complete after 8s [id=1edd3945-5459-46f9-ac88-7e5357cb1292]
-openstack_networking_port_v2.images-p0000000001-s0000000002-link-1: Creating...
-openstack_networking_subnet_v2.images-p0000000001-s0000000002-wan-subnet: Creation complete after 8s [id=869ece3e-8ec7-4637-9b3a-2d13cf264ac9]
-openstack_networking_port_v2.images-p0000000001-s0000000002-link-2: Creating...
-openstack_networking_port_v2.images-p0000000001-s0000000002-link-1: Creation complete after 7s [id=c3772b14-ffbb-4d8d-9dfc-f400aeb2402b]
-openstack_networking_port_v2.images-p0000000001-s0000000002-link-2: Creation complete after 6s [id=843a0a22-8cc2-42ff-889e-617d71fce649]
-openstack_compute_instance_v2.images-p0000000001-s0000000002-man: Creating...
-openstack_compute_instance_v2.images-p0000000001-s0000000002-man: Still creating... [10s elapsed]
-openstack_compute_instance_v2.images-p0000000001-s0000000002-man: Still creating... [20s elapsed]
-openstack_compute_instance_v2.images-p0000000001-s0000000002-man: Creation complete after 24s [id=39b35963-a75e-495f-911c-1b1a4a7384cd]
+openstack_networking_network_v2.images-p0000000002-s0000000003-man-network: Creating...
+openstack_networking_network_v2.images-p0000000002-s0000000003-wan: Creating...
+openstack_networking_port_v2.images-p0000000002-s0000000003-man-out-port: Creating...
+openstack_networking_port_v2.images-p0000000002-s0000000003-man-out-port: Creation complete after 7s [id=b9f25c41-d38b-42f7-a6b4-8d7db4ffd52d]
+openstack_networking_network_v2.images-p0000000002-s0000000003-wan: Creation complete after 8s [id=3f5f75c5-fa1e-4ed9-b38b-32b1c8435fcc]
+openstack_networking_subnet_v2.images-p0000000002-s0000000003-wan-subnet: Creating...
+openstack_networking_network_v2.images-p0000000002-s0000000003-man-network: Still creating... [10s elapsed]
+openstack_networking_network_v2.images-p0000000002-s0000000003-man-network: Creation complete after 11s [id=c80cec52-7868-4c6e-88ce-0d53851123e7]
+openstack_networking_subnet_v2.images-p0000000002-s0000000003-man-network-subnet: Creating...
+openstack_networking_subnet_v2.images-p0000000002-s0000000003-wan-subnet: Creation complete after 7s [id=c5bfbcd2-949e-4b03-9149-408c66e98ba0]
+openstack_networking_port_v2.images-p0000000002-s0000000003-link-2: Creating...
+openstack_networking_subnet_v2.images-p0000000002-s0000000003-man-network-subnet: Creation complete after 6s [id=04202165-9517-40e5-ae20-660d4941857c]
+openstack_networking_port_v2.images-p0000000002-s0000000003-link-1: Creating...
+openstack_networking_port_v2.images-p0000000002-s0000000003-link-2: Creation complete after 7s [id=21795386-7991-4e96-b6d8-348d1009e6dd]
+openstack_networking_port_v2.images-p0000000002-s0000000003-link-1: Creation complete after 6s [id=bc37c92c-206f-4e5e-a5c6-6c56949fd4a4]
+openstack_compute_instance_v2.images-p0000000002-s0000000003-man: Creating...
+openstack_compute_instance_v2.images-p0000000002-s0000000003-man: Still creating... [10s elapsed]
+openstack_compute_instance_v2.images-p0000000002-s0000000003-man: Still creating... [20s elapsed]
+openstack_compute_instance_v2.images-p0000000002-s0000000003-man: Creation complete after 27s [id=95a718b9-7807-4294-8933-163df736ef1c]
 
 Apply complete! Resources: 8 added, 0 changed, 0 destroyed.

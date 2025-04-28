@@ -1,4 +1,4 @@
-Note: switching to '0f3d309'.
+Note: switching to 'd87f174'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -15,6 +15,6 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-HEAD is now at 0f3d309 add: topology.yml
-fatal: No url found for submodule path '.terraform/modules/sandbox' in .gitmodules
+HEAD is now at d87f174 upd: remove terraform from git
+./entrypoint.sh: line 77: cd: provisioning: No such file or directory
 
