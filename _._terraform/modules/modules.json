@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"sandbox","Source":"gitlab.ics.muni.cz/muni-kypo-images/sandbox-ci/kypo","Version":"0.2.0","Dir":".terraform/modules/sandbox"},{"Key":"sandbox.sandbox","Source":"registry.opentofu.org/vydrazde/sandbox/kypo","Version":"0.2.0","Dir":".terraform/modules/sandbox.sandbox"}]}

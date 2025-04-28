@@ -4,7 +4,7 @@ on:
   workflow_call
 
 env: 
-  KYPO_ENDPOINT: ""
+  KYPO_ENDPOINT: "object-store.cloud.muni.cz"
   CI_PROJECT_ID: ${{ github.event.repository.id }}
   CI_PROJECT_URL: ${{ github.event.repository.html_url }}
   CI_COMMIT_SHORT_SHA: ${{ github.sha }}
