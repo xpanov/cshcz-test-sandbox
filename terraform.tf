@@ -1,13 +1,3 @@
-# terraform {
-#   backend "http" {
-#   }
-#   required_providers {
-#     kypo = {
-#       source  = "vydrazde/kypo"
-#     }
-#   }
-# }
-
 terraform {
   required_version = ">= 0.13"
   backend "s3" {
