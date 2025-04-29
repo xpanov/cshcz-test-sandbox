@@ -22,59 +22,60 @@ env:
 
 
 jobs:
-  # terraform-build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout Repository
-  #       uses: actions/checkout@v4
-
-  #     - name: Setup Terraform
-  #       uses: hashicorp/setup-terraform@v3
-
-  #     - name: Init Terraform
-  #       run: terraform init
-
-  #     - name: Vaidate Terraform
-  #       run: terraform validate
-      
-  #     - name: Plan Terraform
-  #       run: terraform plan
-
-  #     - name: Apply Terraform
-  #       run: terraform apply -auto-approve
-      
-  #     - name: Show an output
-  #       run: terraform output pool_url
-  #       #todo make some action message
-      
-  #     - name: Destroy Terraform
-  #       run: terraform destroy -auto-approve
-
-  tofu-build:
+  terraform-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Tofu
-        uses: opentofu/setup-opentofu@v1
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
 
-      - name: Init Tofu
-        run: tofu init
+      - name: Init Terraform
+        run: terraform init
 
-      - name: Vaidate Tofu
-        run: tofu validate
+      - name: Vaidate Terraform
+        run: terraform validate
       
-      - name: Plan Tofu
-        run: tofu plan
+      - name: Plan Terraform
+        run: terraform plan
 
-      - name: Apply Tofu
-        run: tofu apply -auto-approve
+      - name: Apply Terraform
+        run: terraform apply -auto-approve
       
       - name: Show an output
-        run: tofu output pool_url
+        run: terraform output pool_url
         #todo make some action message
       
-      - name: Destroy Tofu
-        run: tofu destroy -auto-approve
+      - name: Destroy Terraform
+        run: terraform destroy -auto-approve
+
+  # tofu-build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Repository
+  #       uses: actions/checkout@v4
+
+  #     - name: Setup Tofu
+  #       uses: opentofu/setup-opentofu@v1
+
+  #     - name: Init Tofu
+  #       run: tofu init
+
+  #     - name: Vaidate Tofu
+  #       run: tofu validate
+      
+  #     - name: Plan Tofu
+  #       run: tofu plan
+
+  #     - name: Apply Tofu
+  #       run: tofu apply -auto-approve
+      
+  #     - name: Show an output
+  #       run: |
+  #         tofu output pool_url
+  #         echo "::notice title=Tofu output (Pool URL)::$(tofu output pool_url)"
+      
+  #     - name: Destroy Tofu
+  #       run: tofu destroy -auto-approve
       
