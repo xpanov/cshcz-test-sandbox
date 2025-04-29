@@ -1,7 +1,12 @@
 name: Terraform build/destroy template
 
+# on:
+#   workflow_call
 on:
-  workflow_call
+  push:
+    branches: ['**']
+  pull_request:
+    branches: ['**']
 
 env: 
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
