@@ -46,7 +46,7 @@ jobs:
       - name: Show an output
         run: |
           tofu output pool_url
-          echo "::notice title=Tofu output (Pool URL)::$(tofu output pool_url)"
+          echo "::notice title=Tofu output (Pool URL)::$(tofu output pool_url | tr '\n' ' ')"
       
       - name: Destroy Tofu
         run: tofu destroy -auto-approve
