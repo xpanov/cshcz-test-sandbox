@@ -50,7 +50,7 @@ jobs:
   #     - name: Destroy Terraform
   #       run: terraform destroy -auto-approve
 
-    tofu-build:
+  tofu-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
